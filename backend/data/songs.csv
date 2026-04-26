@@ -1,0 +1,121 @@
+id,name,artist,album,genre,danceability,energy,valence,tempo,acousticness,instrumentalness,liveness,speechiness,loudness,popularity,year
+1,Gurenge,LiSA,Demon Slayer OST,Action,0.69,0.82,0.51,160.0,0.02,0.0,0.112,0.042,-5.2,97,2019
+2,Homura,LiSA,Demon Slayer Movie OST,Emotional,0.54,0.71,0.38,140.0,0.05,0.0,0.104,0.031,-7.1,95,2020
+3,Unravel,TK from Ling Tosite Sigure,Tokyo Ghoul OST,Action,0.48,0.76,0.19,168.0,0.01,0.0,0.089,0.045,-5.8,95,2014
+4,Kaikai Kitan,Eve,Jujutsu Kaisen OST,Action,0.68,0.74,0.45,160.0,0.03,0.0,0.121,0.063,-6.1,96,2020
+5,Guren no Yumiya,Linked Horizon,Attack on Titan OST,Action,0.52,0.93,0.35,150.0,0.004,0.0,0.148,0.052,-4.3,94,2013
+6,Silhouette,KANA-BOON,Naruto Shippuden OST,Action,0.75,0.80,0.65,178.0,0.018,0.0,0.094,0.037,-5.4,93,2014
+7,Blue Bird,Ikimono Gakari,Naruto Shippuden OST,J-Pop,0.70,0.71,0.72,155.0,0.04,0.0,0.102,0.034,-6.3,92,2008
+8,A Cruel Angels Thesis,Yoko Takahashi,Neon Genesis Evangelion OST,J-Pop,0.72,0.73,0.70,156.0,0.06,0.0,0.118,0.040,-6.0,94,1995
+9,Connect,ClariS,Puella Magi Madoka Magica OST,Fantasy,0.72,0.64,0.62,138.0,0.03,0.0,0.108,0.038,-6.8,91,2011
+10,Crossing Field,LiSA,Sword Art Online OST,Action,0.67,0.84,0.55,170.0,0.02,0.0,0.097,0.041,-5.1,93,2012
+11,Idol,YOASOBI,Oshi no Ko OST,J-Pop,0.80,0.78,0.72,155.0,0.01,0.0,0.103,0.078,-5.5,98,2023
+12,Sparkle,RADWIMPS,Your Name OST,Emotional,0.57,0.61,0.64,145.0,0.09,0.0,0.114,0.039,-7.4,94,2016
+13,Zenzenzense,RADWIMPS,Your Name OST,J-Pop,0.75,0.80,0.71,184.0,0.02,0.0,0.107,0.043,-5.2,93,2016
+14,Hikaru Nara,Goose House,Your Lie in April OST,Romance,0.62,0.60,0.64,148.0,0.12,0.0,0.116,0.036,-7.1,92,2014
+15,Again,YUI,Fullmetal Alchemist Brotherhood OST,Action,0.63,0.78,0.45,158.0,0.04,0.0,0.099,0.048,-5.9,92,2009
+16,Peace Sign,Kenshi Yonezu,My Hero Academia OST,Action,0.73,0.80,0.67,182.0,0.02,0.0,0.093,0.041,-5.3,93,2017
+17,Cry Baby,Official HIGE DANdism,Tokyo Revengers OST,Action,0.72,0.85,0.51,170.0,0.01,0.0,0.098,0.062,-4.8,95,2021
+18,Bling-Bang-Bang-Born,Creepy Nuts,Mashle OST,Hype,0.88,0.82,0.74,170.0,0.008,0.0,0.112,0.083,-4.5,97,2024
+19,Fly High,BURNOUT SYNDROMES,Haikyuu OST,Sports,0.65,0.87,0.61,168.0,0.01,0.0,0.124,0.041,-4.6,92,2016
+20,Imagination,SPYAIR,Haikyuu OST,Sports,0.71,0.85,0.62,185.0,0.02,0.0,0.109,0.047,-5.1,91,2014
+21,Brave Song,Aoi Tada,Angel Beats OST,Emotional,0.47,0.38,0.19,75.0,0.62,0.0,0.089,0.029,-10.3,90,2010
+22,Magia,Kalafina,Puella Magi Madoka Magica OST,Emotional,0.37,0.55,0.18,123.0,0.18,0.0,0.094,0.031,-9.2,91,2011
+23,Red Swan,YOSHIKI x Hyde,Attack on Titan OST,Emotional,0.52,0.54,0.39,128.0,0.14,0.0,0.108,0.033,-8.1,90,2018
+24,Dango Daikazoku,Chata,Clannad OST,Emotional,0.44,0.28,0.38,77.0,0.81,0.0,0.082,0.027,-11.2,91,2007
+25,Plastic Love,Mariya Takeuchi,Variety,City Pop,0.78,0.60,0.75,116.0,0.18,0.0,0.108,0.038,-7.8,94,1984
+26,Usseewa,Ado,Usseewa Single,J-Pop,0.72,0.87,0.46,176.0,0.003,0.0,0.104,0.064,-4.7,97,2020
+27,Vivid Vice,Who-ya Extended,Jujutsu Kaisen OST,Action,0.66,0.79,0.38,155.0,0.02,0.0,0.117,0.041,-5.9,92,2021
+28,Ao no Sumika,Tatsuya Kitani,Jujutsu Kaisen S2 OST,Action,0.67,0.74,0.45,152.0,0.04,0.0,0.109,0.038,-6.2,93,2023
+29,Good Morning World,BURNOUT SYNDROMES,Dr Stone OST,Action,0.72,0.88,0.71,188.0,0.01,0.0,0.121,0.042,-4.4,92,2019
+30,Renai Circulation,Kana Hanazawa,Bakemonogatari OST,Romance,0.77,0.62,0.89,145.0,0.04,0.0,0.097,0.038,-6.9,92,2009
+31,Fantastic Dreamer,Machico,KonoSuba OST,Fantasy,0.74,0.75,0.83,156.0,0.03,0.0,0.103,0.041,-6.0,90,2016
+32,Fighting Gold,Coda,JoJos Bizarre Adventure OST,Action,0.65,0.85,0.58,162.0,0.02,0.0,0.118,0.044,-5.2,92,2018
+33,Great Days,Yukinojo Mori,JoJos Bizarre Adventure OST,J-Pop,0.72,0.76,0.74,132.0,0.04,0.0,0.107,0.038,-6.4,91,2016
+34,Bloody Stream,Coda,JoJos Bizarre Adventure OST,Action,0.64,0.79,0.52,145.0,0.03,0.0,0.112,0.040,-5.7,91,2012
+35,Odd Future,UVERworld,My Hero Academia OST,Action,0.67,0.87,0.58,174.0,0.01,0.0,0.116,0.046,-4.9,92,2018
+36,Orange,7!!,Your Lie in April OST,Romance,0.61,0.56,0.59,138.0,0.24,0.0,0.113,0.034,-8.3,91,2014
+37,Brave Shine,Aimer,Fate Stay Night OST,Emotional,0.57,0.67,0.44,155.0,0.10,0.0,0.098,0.035,-7.2,92,2015
+38,Ignite,Eir Aoi,Sword Art Online II OST,Action,0.65,0.81,0.56,174.0,0.02,0.0,0.104,0.039,-5.5,91,2014
+39,This Game,Konomi Suzuki,No Game No Life OST,Fantasy,0.71,0.83,0.62,178.0,0.02,0.0,0.109,0.042,-5.3,91,2014
+40,GO!!,FLOW,Naruto OST,Action,0.73,0.83,0.64,171.0,0.02,0.0,0.118,0.046,-5.0,92,2004
+41,Shinzou wo Sasageyo,Linked Horizon,Attack on Titan S2 OST,Action,0.55,0.91,0.45,148.0,0.008,0.0,0.152,0.051,-4.1,93,2017
+42,My Soul Your Beats,Lia,Angel Beats OST,J-Pop,0.70,0.71,0.68,180.0,0.03,0.0,0.101,0.039,-6.2,90,2010
+43,Sign,FLOW,Naruto Shippuden OST,J-Pop,0.68,0.69,0.59,142.0,0.05,0.0,0.108,0.036,-6.8,90,2006
+44,Sugar Song and Bitter Step,UNISON SQUARE GARDEN,Blood Blockade Battlefront OST,J-Pop,0.83,0.88,0.78,220.0,0.01,0.0,0.131,0.052,-3.9,93,2015
+45,Re Re,ASIAN KUNG-FU GENERATION,Erased OST,Action,0.68,0.84,0.47,176.0,0.02,0.0,0.124,0.042,-5.0,92,2016
+46,Odd Future,UVERworld,My Hero Academia OST,Action,0.67,0.87,0.58,174.0,0.01,0.0,0.116,0.046,-4.9,92,2018
+47,Gimme Gimme,Hachioji P ft Hatsune Miku,Vocaloid Collection,Vocaloid,0.87,0.81,0.55,172.0,0.007,0.0,0.098,0.079,-4.6,93,2020
+48,Remote Control,DECO27 ft Hatsune Miku,Vocaloid Collection,Vocaloid,0.82,0.79,0.63,175.0,0.01,0.0,0.104,0.072,-5.1,91,2011
+49,Melt,ryo ft Hatsune Miku,Vocaloid Collection,Vocaloid,0.74,0.68,0.77,144.0,0.03,0.0,0.097,0.048,-6.7,90,2007
+50,Koi wa War,Various,Love Live School Idol Project,Romance,0.76,0.74,0.84,158.0,0.02,0.0,0.108,0.043,-5.8,89,2014
+51,Rising Hope,LiSA,Mahouka Koukou no Rettousei OST,Action,0.68,0.83,0.57,172.0,0.02,0.0,0.102,0.041,-5.4,90,2014
+52,Flyers,BRADIO,Death Parade OST,J-Pop,0.82,0.79,0.85,136.0,0.02,0.0,0.115,0.043,-5.6,92,2015
+53,Neon Genesis Theme,Shiro Sagisu,Neon Genesis Evangelion OST,Emotional,0.38,0.44,0.26,90.0,0.35,0.08,0.094,0.028,-9.8,90,1995
+54,My Ordinary Life,Eba,Nichijou OST,J-Pop,0.71,0.72,0.82,164.0,0.03,0.0,0.103,0.039,-6.1,89,2011
+55,Hacking to the Gate,Kanako Ito,Steins Gate OST,Action,0.65,0.72,0.48,157.0,0.04,0.0,0.106,0.038,-6.5,92,2011
+56,Oath Sign,LiSA,Fate Zero OST,Action,0.66,0.80,0.50,165.0,0.02,0.0,0.104,0.040,-5.6,91,2011
+57,Crossing Field,LiSA,Sword Art Online OST,Action,0.67,0.84,0.55,170.0,0.02,0.0,0.097,0.041,-5.1,93,2012
+58,Chiisana Koi no Uta,MONGOL800,Various Anime,Romance,0.63,0.61,0.81,132.0,0.08,0.0,0.114,0.035,-7.3,89,2001
+59,Sakura Kiss,Chieko Kawabe,Ouran High School Host Club OST,Romance,0.68,0.65,0.86,140.0,0.05,0.0,0.103,0.040,-6.8,89,2006
+60,Catch You Catch Me,GUMI,Cardcaptor Sakura OST,Fantasy,0.71,0.67,0.88,140.0,0.05,0.0,0.101,0.038,-6.9,89,1998
+61,Tank!,Seatbelts,Cowboy Bebop OST,J-Pop,0.68,0.82,0.72,162.0,0.04,0.06,0.382,0.045,-5.4,93,1998
+62,The Real Folk Blues,Seatbelts,Cowboy Bebop OST,Emotional,0.44,0.42,0.35,82.0,0.38,0.0,0.214,0.033,-10.1,91,1998
+63,Fly Me to the Moon,Claire,Neon Genesis Evangelion OST,Emotional,0.59,0.38,0.68,130.0,0.54,0.0,0.102,0.028,-10.4,90,1995
+64,Sono Chi no Sadame,Hiroaki Tommy Tominaga,JoJos Bizarre Adventure OST,Action,0.58,0.88,0.62,158.0,0.02,0.0,0.141,0.053,-4.8,92,2012
+65,Shinpakusuu 0822,Konomi Suzuki,Various Anime,J-Pop,0.67,0.76,0.64,158.0,0.03,0.0,0.104,0.040,-5.9,88,2013
+66,Zero,BUMP OF CHICKEN,My Hero Academia OST,Action,0.65,0.76,0.55,164.0,0.04,0.0,0.102,0.037,-6.2,91,2019
+67,Star Marker,KANA-BOON,My Hero Academia OST,Action,0.73,0.82,0.72,185.0,0.02,0.0,0.098,0.041,-5.3,91,2020
+68,Polaris,Blue Encount,My Hero Academia OST,Action,0.68,0.79,0.58,165.0,0.03,0.0,0.107,0.039,-5.8,90,2020
+69,Shounen no Abyss,Yoasobi,Various Anime,Emotional,0.62,0.65,0.32,142.0,0.05,0.0,0.103,0.048,-6.9,91,2021
+70,Yoru ni Kakeru,YOASOBI,Debut Single,J-Pop,0.76,0.77,0.63,155.0,0.02,0.0,0.101,0.056,-5.6,97,2019
+71,Into the Night,YOASOBI,Various,J-Pop,0.78,0.74,0.68,158.0,0.02,0.0,0.103,0.059,-5.9,94,2020
+72,Odoriko,Vaundy,Vinland Saga OST,Action,0.73,0.78,0.61,166.0,0.02,0.0,0.108,0.052,-5.7,93,2023
+73,Shikigami,BUCK-TICK,Tokyo Ghoul re OST,Action,0.57,0.78,0.33,152.0,0.03,0.0,0.114,0.038,-6.1,88,2018
+74,Kyojin ni Nare,Man with a Mission,Attack on Titan Final Season,Action,0.63,0.86,0.48,172.0,0.01,0.0,0.121,0.044,-5.0,93,2020
+75,The Rumbling,SiM,Attack on Titan Final Season Part 2,Action,0.61,0.91,0.41,176.0,0.008,0.0,0.136,0.049,-4.5,95,2022
+76,Shoukei to Shikabane no Michi,Linked Horizon,Attack on Titan S3 OST,Action,0.54,0.90,0.42,146.0,0.006,0.0,0.158,0.054,-4.2,92,2018
+77,Ashes on the Fire,Hiroyuki Sawano,Attack on Titan OST,Emotional,0.47,0.72,0.30,128.0,0.06,0.12,0.094,0.035,-6.8,90,2013
+78,Call of Silence,Hiroyuki Sawano,Attack on Titan OST,Emotional,0.39,0.58,0.21,88.0,0.22,0.04,0.089,0.028,-9.1,91,2014
+79,Liar Mask,Rika Mayama,Akame ga Kill OST,Action,0.62,0.78,0.42,158.0,0.03,0.0,0.104,0.040,-5.9,89,2014
+80,Mirai Koukou,Azalea,Love Live Sunshine OST,J-Pop,0.74,0.71,0.82,152.0,0.03,0.0,0.102,0.041,-6.3,88,2017
+81,Seishun Complex,BURNOUT SYNDROMES,Haikyuu To the Top OST,Sports,0.71,0.85,0.66,174.0,0.01,0.0,0.118,0.043,-5.0,91,2020
+82,Ayano no Koufuku Riron,Jin,Kagerou Project,Vocaloid,0.70,0.74,0.58,168.0,0.02,0.0,0.103,0.056,-5.8,89,2012
+83,Outer Science,Jin,Kagerou Project,Vocaloid,0.67,0.78,0.34,170.0,0.01,0.0,0.096,0.062,-5.5,88,2013
+84,Paprika,Fooyin Sumino,Various Anime,J-Pop,0.72,0.69,0.78,148.0,0.04,0.0,0.106,0.044,-6.4,90,2020
+85,Otome Kaibou,DECO27,Vocaloid Collection,Vocaloid,0.81,0.80,0.52,174.0,0.008,0.0,0.098,0.068,-5.0,90,2018
+86,Monster,YOASOBI,Various,J-Pop,0.77,0.76,0.54,156.0,0.01,0.0,0.102,0.063,-5.5,93,2021
+87,Heart wa Juujika,Various,Various Anime,Romance,0.66,0.63,0.76,142.0,0.06,0.0,0.104,0.037,-7.0,87,2015
+88,Higurashi no Naku Koro ni,Eiko Shimamiya,Higurashi OST,Emotional,0.51,0.64,0.29,136.0,0.07,0.0,0.099,0.034,-7.4,89,2006
+89,Lion,May'n and Megumi Nakajima,Macross Frontier OST,J-Pop,0.72,0.78,0.72,162.0,0.03,0.0,0.107,0.041,-5.9,90,2008
+90,Innocent Days,Nana Mizuki,Elfen Lied OST,Emotional,0.46,0.37,0.30,84.0,0.56,0.0,0.089,0.029,-10.8,90,2004
+91,Tabi no Tochuu,Natsumi Kiyoura,Spice and Wolf OST,Emotional,0.48,0.42,0.45,90.0,0.62,0.0,0.092,0.028,-10.2,89,2008
+92,Platinum,Akino,Cardcaptor Sakura OST,Fantasy,0.69,0.67,0.82,144.0,0.04,0.0,0.099,0.038,-6.7,89,2000
+93,Moonlight Densetsu,DALI,Sailor Moon OST,J-Pop,0.70,0.68,0.83,148.0,0.05,0.0,0.104,0.039,-6.8,91,1992
+94,Sobakasu,JUDY AND MARY,Rurouni Kenshin OST,J-Pop,0.75,0.80,0.77,178.0,0.02,0.0,0.112,0.043,-5.1,91,1996
+95,Heart of Sword,T.M.Revolution,Rurouni Kenshin OST,Action,0.68,0.82,0.61,165.0,0.03,0.0,0.108,0.041,-5.5,90,1997
+96,Resonance,T.M.Revolution,Soul Eater OST,Action,0.71,0.83,0.59,170.0,0.02,0.0,0.111,0.043,-5.3,91,2008
+97,Inner Universe,Yoko Kanno,Ghost in the Shell SAC OST,Emotional,0.56,0.55,0.41,118.0,0.14,0.04,0.106,0.038,-7.9,92,2002
+98,Rise,Origa,Ghost in the Shell SAC 2nd GIG OST,Emotional,0.54,0.57,0.39,122.0,0.12,0.02,0.101,0.035,-8.1,91,2004
+99,Days,FLOW,Eureka Seven OST,J-Pop,0.73,0.78,0.68,165.0,0.03,0.0,0.109,0.042,-5.8,90,2005
+100,Bluebird,Ikimono Gakari,Naruto Shippuden OST,J-Pop,0.70,0.71,0.72,155.0,0.04,0.0,0.102,0.034,-6.3,92,2008
+101,We Are!,Hiroshi Kitadani,One Piece OST,Hype,0.82,0.89,0.88,176.0,0.01,0.0,0.142,0.062,-4.1,97,1999
+102,We Go!,Hiroshi Kitadani,One Piece OST,Hype,0.79,0.86,0.83,172.0,0.01,0.0,0.136,0.058,-4.4,95,2011
+103,Kokoro no Chizu,BOYSTYLE,One Piece OST,Emotional,0.71,0.74,0.78,158.0,0.03,0.0,0.112,0.044,-5.9,93,2004
+104,Bon Voyage!,BOYSTYLE,One Piece OST,Hype,0.78,0.83,0.85,168.0,0.02,0.0,0.118,0.051,-5.2,92,2005
+105,brand new world,D-51,One Piece OST,Hype,0.76,0.81,0.80,162.0,0.02,0.0,0.123,0.048,-5.5,91,2006
+106,Jungle P,5050,One Piece OST,J-Pop,0.83,0.78,0.87,156.0,0.03,0.0,0.108,0.055,-5.8,90,2007
+107,One Day,The ROOTLESS,One Piece OST,Hype,0.74,0.88,0.72,174.0,0.01,0.0,0.131,0.049,-4.6,93,2010
+108,Fight Together,Namie Amuro,One Piece OST,Emotional,0.65,0.71,0.65,148.0,0.06,0.0,0.104,0.038,-6.7,92,2011
+109,Hands Up!,Kota Shinzato,One Piece OST,Hype,0.80,0.84,0.82,170.0,0.02,0.0,0.126,0.053,-5.0,90,2012
+110,Marinford - Zoro and the Crew,Kohei Tanaka,One Piece OST,Battle,0.42,0.91,0.28,142.0,0.01,0.35,0.168,0.032,-4.8,91,2012
+111,Binks' Sake,Mizuki Nana,One Piece OST,Emotional,0.68,0.58,0.72,130.0,0.18,0.0,0.103,0.038,-7.8,94,2008
+112,We Are! (New World Ver.),Hiroshi Kitadani,One Piece New World OST,Hype,0.83,0.91,0.86,178.0,0.01,0.0,0.144,0.064,-4.0,96,2013
+113,Hard Knock Days,GENERATIONS from EXILE TRIBE,One Piece OST,Hype,0.77,0.83,0.79,164.0,0.02,0.0,0.119,0.056,-5.1,93,2015
+114,Hope,Namie Amuro,One Piece OST,Emotional,0.67,0.72,0.66,150.0,0.05,0.0,0.107,0.041,-6.5,92,2017
+115,Over the Top,Hiroshi Kitadani,One Piece OST,Hype,0.81,0.90,0.84,180.0,0.01,0.0,0.138,0.061,-4.2,94,2019
+116,DREAMIN ON,Da-iCE,One Piece OST,Hype,0.79,0.85,0.81,168.0,0.02,0.0,0.128,0.057,-4.7,93,2021
+117,PAINT,I Don't Like Mondays,One Piece OST,Emotional,0.63,0.68,0.58,145.0,0.07,0.0,0.105,0.039,-6.9,91,2022
+118,Baddest,K/DA,One Piece OST,Battle,0.58,0.88,0.44,158.0,0.01,0.0,0.124,0.047,-5.3,92,2020
+119,Bagpipe - Usopp Theme,Kohei Tanaka,One Piece OST,Battle,0.55,0.79,0.52,135.0,0.04,0.22,0.152,0.035,-6.1,89,2001
+120,Luffy's Theme - Gomu Gomu,Kohei Tanaka,One Piece OST,Battle,0.61,0.85,0.64,148.0,0.02,0.18,0.162,0.038,-5.4,90,2001

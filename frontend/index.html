@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Grand Line Music — One Piece AI Music</title>
+  <meta name="description" content="AI-powered One Piece music recommendation — set sail on the Grand Line of sound"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<!-- Particle canvas -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- Hidden YouTube Player (Must be at least 200x200 for reliable API playback) -->
+<div id="yt-container" style="position:fixed;bottom:0;right:0;width:200px;height:200px;opacity:0.01;pointer-events:none;z-index:-1">
+  <div id="yt-player"></div>
+</div>
+
+<!-- Command Palette -->
+<div id="cmd-palette" class="cmd-overlay hidden">
+  <div class="cmd-box">
+    <div class="cmd-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="cmd-input" type="text" placeholder="Search songs, artists, anime…" autocomplete="off"/>
+      <kbd class="cmd-esc">ESC</kbd>
+    </div>
+    <div class="cmd-results" id="cmd-results"></div>
+    <div class="cmd-footer">
+      <span><kbd>↑↓</kbd> navigate</span>
+      <span><kbd>Enter</kbd> play</span>
+      <span><kbd>Space</kbd> play/pause</span>
+      <span><kbd>[</kbd><kbd>]</kbd> skip</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="rgba(255,255,255,0.08)"/><path d="M9 9c0-1.66 1.34-3 3-3s3 1.34 3 3c0 2-3 3-3 3" stroke-linecap="round"/><circle cx="12" cy="17" r=".5" fill="currentColor" stroke="none"/><path d="M4 8 Q8 5 12 8 Q16 11 20 8" stroke-linecap="round" stroke-width="1.5"/></svg>
+      </div>
+      <span class="logo-jp">麦わらの音楽</span>
+      <span class="logo-en">Grand Line</span>
+    </div>
+
+    <div class="search-wrap">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="search-input" type="text" placeholder="Search the Grand Line… songs, crews, arcs…" autocomplete="off"/>
+      <div id="search-dropdown" class="search-dropdown hidden"></div>
+    </div>
+
+    <div class="engine-badge" id="engine-badge">
+      <span class="badge-dot"></span>
+      <span id="engine-label">Log Pose Active</span>
+    </div>
+  </div>
+</header>
+
+<!-- ── LAYOUT ── -->
+<main class="layout">
+
+  <!-- LEFT: Browser -->
+  <section class="panel panel-songs">
+    <div class="mood-bar">
+      <button class="mood-btn active" data-mood="">⚓ All Seas</button>
+      <button class="mood-btn" data-mood="hype">🔥 Hype</button>
+      <button class="mood-btn" data-mood="emotional">💔 Emotional</button>
+      <button class="mood-btn" data-mood="chill">🌊 Chill</button>
+      <button class="mood-btn" data-mood="battle">⚡ Battle</button>
+      <button class="mood-btn" data-mood="dance">💃 Dance</button>
+      <button class="mood-btn" data-mood="grandline" style="background:linear-gradient(135deg,#e63946,#f5c518);color:#000;border-color:transparent;font-weight:800">⚓ One Piece</button>
+    </div>
+    <div class="genre-bar" id="genre-bar"></div>
+    <h2 class="section-title" id="browse-title">⚓ All Grand Line Tracks</h2>
+    <div class="songs-grid" id="songs-grid">
+      <div class="loading-pulse"></div>
+    </div>
+  </section>
+
+  <!-- CENTER: Now Playing -->
+  <section class="panel panel-center">
+    <div id="placeholder" class="placeholder">
+      <div class="placeholder-kanji">GRAND LINE</div>
+      <p>⚓ Choose a track and set sail</p>
+      <p class="placeholder-sub">The AI Navigator will chart your musical course across the seas</p>
+    </div>
+
+    <div id="now-playing" class="now-playing" style="display:none">
+      <div class="np-art-wrap">
+        <canvas id="np-canvas" width="210" height="210"></canvas>
+        <img id="np-art-img" class="np-art-img" src="" alt="" style="display:none"/>
+        <div class="np-ring-outer"></div>
+        <div class="np-ring-inner"></div>
+      </div>
+      <div class="np-info">
+        <p class="np-genre" id="np-genre">Genre</p>
+        <h2 class="np-title" id="np-title">Song</h2>
+        <p class="np-artist" id="np-artist">Artist</p>
+        <p class="np-album" id="np-album">Anime · Year</p>
+        <div class="audio-features" id="audio-features"></div>
+        <div class="np-actions">
+          <button class="action-btn" id="btn-like" onclick="sendInteraction('like')" title="Like">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <button class="action-btn action-skip" onclick="sendInteraction('skip')" title="Not for me">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <button class="action-btn action-add" onclick="addToPlaylist()" title="Add to queue">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="recs-section" style="display:none">
+      <div class="recs-header">
+        <h3>🏴‍☠️ Nakama Picks</h3>
+        <span class="engine-chip" id="engine-chip">AI Navigator</span>
+      </div>
+      <div class="recs-list" id="recs-list"></div>
+    </div>
+  </section>
+
+  <!-- RIGHT: Queue + Engine -->
+  <section class="panel panel-queue">
+    <div class="queue-header">
+      <div><h3>🎶 Ship's Log</h3><span class="queue-count" id="queue-count"></span></div>
+      <div class="queue-nav">
+        <button onclick="queuePrev()" title="Prev">‹</button>
+        <button onclick="queueNext()" title="Next">›</button>
+      </div>
+    </div>
+    <div class="queue-list" id="queue-list">
+      <p class="queue-empty">⚓ No songs queued yet.<br>Select a track to set sail!</p>
+    </div>
+    <div class="engine-panel">
+      <h4>🗺️ Navigator AI</h4>
+      <div class="engine-bars">
+        <div class="ebar-wrap"><span>Content</span><div class="ebar"><div class="ebar-fill content-fill" id="content-bar" style="width:100%"></div></div><span id="content-pct">100%</span></div>
+        <div class="ebar-wrap"><span>Collab</span><div class="ebar"><div class="ebar-fill collab-fill" id="collab-bar" style="width:0%"></div></div><span id="collab-pct">0%</span></div>
+      </div>
+      <p class="engine-hint" id="engine-hint">Interact to unlock the Log Pose AI</p>
+      <div class="stats-row" id="stats-row"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Trending -->
+<section class="trending-strip">
+  <h3>🏴‍☠️ 伝説の曲 — Trending on the Grand Line</h3>
+  <div class="trending-list" id="trending-list"></div>
+</section>
+
+<!-- Ocean Wave Animation -->
+<div class="ocean-waves"><div class="wave"></div><div class="wave"></div><div class="wave"></div></div>
+
+<!-- ── PLAYER BAR ── -->
+<div class="player-bar" id="player-bar" style="display:none">
+  <audio id="audio-el" preload="none"></audio>
+  <div class="player-art-wrap">
+    <canvas id="player-canvas" width="50" height="50"></canvas>
+    <img id="player-art-img" class="player-art-img" src="" alt="" style="display:none"/>
+  </div>
+  <div class="player-meta">
+    <span class="player-title" id="player-title">—</span>
+    <span class="player-artist" id="player-artist">—</span>
+  </div>
+  <div class="player-controls">
+    <button class="ctrl-btn" onclick="queuePrev()" title="Prev">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+    </button>
+    <button class="ctrl-btn ctrl-play" id="btn-play" onclick="togglePlay()">
+      <svg id="icon-play" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+    </button>
+    <button class="ctrl-btn" onclick="queueNext()" title="Next">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6h2v12h-2z"/></svg>
+    </button>
+  </div>
+  <div class="waveform" id="waveform"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="player-progress-wrap">
+    <span class="player-time" id="time-cur">0:00</span>
+    <div class="player-progress" id="player-progress" onclick="seekAudio(event)">
+      <div class="player-progress-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <span class="player-time" id="time-dur">0:30</span>
+  </div>
+  <div class="player-vol-wrap">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+    <input type="range" id="vol-slider" min="0" max="1" step="0.02" value="0.8" oninput="setVolume(this.value)"/>
+  </div>
+  <div class="player-preview-tag" id="player-preview-tag">▶ 30s</div>
+</div>
+
+<!-- Scroll sentinel for infinite scroll -->
+<div id="scroll-sentinel" style="height:1px"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
