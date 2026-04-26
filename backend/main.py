@@ -16,6 +16,7 @@ Endpoints:
   GET  /stats          → global stats
 """
 from contextlib import asynccontextmanager
+import logging
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -36,9 +37,17 @@ engine = HybridEngine()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    db.init_db()
-    db.migrate_db()   # add any new columns safely
-    engine.initialize()
+    try:
+        logging.basicConfig(level=logging.INFO)
+        logging.info("[startup] Initialising database...")
+        db.init_db()
+        db.migrate_db()
+        logging.info("[startup] DB ready. Fitting engine...")
+        engine.initialize()
+        logging.info("[startup] Engine ready. Server is live!")
+    except Exception as e:
+        logging.exception(f"[startup] FATAL ERROR during initialisation: {e}")
+        raise
     yield
 
 app = FastAPI(

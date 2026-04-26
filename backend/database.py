@@ -36,6 +36,7 @@ def init_db():
             artist TEXT NOT NULL,
             album TEXT NOT NULL,
             genre TEXT NOT NULL,
+            popularity INTEGER DEFAULT 50,
             danceability REAL DEFAULT 0,
             energy REAL DEFAULT 0,
             valence REAL DEFAULT 0,
