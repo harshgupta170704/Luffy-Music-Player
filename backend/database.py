@@ -8,6 +8,7 @@ import pandas as pd
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 
+
 DB_PATH = Path(__file__).parent / "data" / "music_rec.db"
 
 INTERACTION_WEIGHTS = {
