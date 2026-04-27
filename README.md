@@ -65,3 +65,5 @@ The project is fully prepared for zero-downtime deployment on platforms like **R
 
 ---
 *"Wealth, fame, power... The man who had acquired everything in this world, the Pirate King, Gold Roger."*
+ENJOY THE ANIME WORLD 
+
